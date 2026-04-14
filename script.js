@@ -1,6 +1,6 @@
 const allSkils = document.getElementById("skils")
 
-const menuIcon = document.querySelector(".material-symbols-outlined");
+const menuIcon = document.querySelector("#menu");
 const nav = document.querySelector("nav");
 
 menuIcon.addEventListener("click", () => {
