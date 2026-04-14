@@ -1,0 +1,171 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #020617;
+}
+
+/* MENU ICON (mobile primeiro) */
+.sobre,
+.full-skils {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu {
+    font-size: 32px;
+    cursor: pointer;
+    display: block;
+
+}
+
+/* NAV (mobile escondido por padrão) */
+nav {
+    background: #020617;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+}
+
+/* quando ativar via JS */
+nav.active {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e2e8f0;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* MAIN */
+main {
+    padding: 40px 20px;
+}
+
+/* TITLES */
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* SOBRE */
+.sobre {
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* SKILLS */
+.full-skils {
+    margin-top: 50px;
+}
+
+.skils {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* CARD BONITO */
+.skils li {
+    background: linear-gradient(145deg, #020617, #1e293b);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.skils li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #38bdf8;
+    top: 0;
+    left: 0;
+}
+
+.skils li:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.2);
+}
+
+/* TEXTOS DOS CARDS */
+.title-skills {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.about {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    margin-top: 40px;
+}
+
+.author {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+
+    /* some com o menu hamburguer */
+    #menu {
+        display: none;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    /* nav visível e centralizada */
+    nav {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        gap: 30px;
+        width: auto;
+        padding: 0;
+    }
+
+    nav a {
+        margin: 0;
+    }
+}
